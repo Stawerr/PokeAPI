@@ -18,7 +18,7 @@ async function fetchAllPokemons (){
                         empty(pokedex);
                         return pokemon.name.includes(searchString)
                     })
-                    console.log(filteredPokemons)
+                    //console.log(filteredPokemons)
                     filteredPokemons.forEach(pokemon=>{
                         const types=pokemon.types.map(typeInfo =>typeInfo.type.name)
                         const ul=document.querySelector('#pokedex')
@@ -58,5 +58,3 @@ function empty(element) {
        element.firstElementChild.remove();
     }
   }
-
-//console.log(pokemonPromises)
